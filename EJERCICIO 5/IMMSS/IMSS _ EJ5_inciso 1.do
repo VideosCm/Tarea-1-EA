@@ -28,9 +28,9 @@ quietly gen turb = tpu + teu
 
 quietly gen trur = tpc + tec
 
-quietly collapse (sum) ta turb trur, by(fecha)
+quietly collapse (sum) ta turb trur asegurados, by(fecha)
 
-quietly collapse (mean) ta turb trur
+quietly collapse (mean) ta turb trur asegurados
 
 quietly gen year = `yr'
 
